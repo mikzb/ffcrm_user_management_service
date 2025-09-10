@@ -16,9 +16,17 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:show, :update] do
         collection do
-          get :auto_complete
+          match :auto_complete, via: [:get, :post]
+        end
+        member do
+          put  :change_password
+          put  :preferences
+          put  :avatar     # toggle gravatar
+          post :avatar     # multipart upload
         end
       end
     end
   end
 end
+
+
