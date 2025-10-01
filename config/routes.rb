@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get 'jwks', to: 'jwks#show'
       resources :users, only: [:show, :update] do
         collection do
           match :auto_complete, via: [:get, :post]
@@ -23,6 +24,16 @@ Rails.application.routes.draw do
           put  :preferences
           put  :avatar     # toggle gravatar
           post :avatar     # multipart upload
+        end
+      end
+      namespace :admin do
+        resources :tokens, only: [:create]
+        resources :groups
+        resources :users do
+          member do
+            put :suspend
+            put :reactivate
+          end
         end
       end
     end

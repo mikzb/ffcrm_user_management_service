@@ -31,3 +31,4 @@ Design
 storage/
 .byebug_history
 .env
+*.pem
