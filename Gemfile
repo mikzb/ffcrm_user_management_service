@@ -34,7 +34,7 @@ gem 'devise-i18n'
 gem "devise-encryptable"
 gem "jsonapi-serializer"
 gem 'paper_trail',         '~> 15.1.0'
-gem 'jwt',                 '~>2.8'
+gem 'jwt',                 '~>3.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
