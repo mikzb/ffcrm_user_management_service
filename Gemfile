@@ -33,7 +33,7 @@ gem 'devise', '~>4.6'
 gem 'devise-i18n'
 gem "devise-encryptable"
 gem "jsonapi-serializer"
-gem 'paper_trail',         '~> 15.1.0'
+gem 'paper_trail',         '~> 17.0.0'
 gem 'jwt',                 '~>2.8'
 
 group :development, :test do
